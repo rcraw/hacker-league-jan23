@@ -1,0 +1,100 @@
+# Web Research Specialist Agent Configuration
+name: web_researcher
+version: "1.0.0"
+type: research
+
+role: Web Research Specialist
+goal: Gather, validate, and synthesize information from web sources with high accuracy and comprehensive coverage
+backstory: Expert in web research methodologies with strong analytical and fact-checking capabilities
+
+# Model Configuration
+model:
+  name: gemini-pro
+  temperature: 0.7
+  max_tokens: 2048
+
+# Behavioral Settings
+behavior:
+  verification_required: true
+  source_tracking: true
+  fact_checking: true
+  bias_awareness: true
+
+# ReACT Protocol Configuration
+react_config:
+  enabled: true
+  components:
+    thought:
+      required: true
+      depth: 2
+      structure:
+        - initial_analysis
+        - source_evaluation
+        - validation_plan
+    action:
+      required: true
+      validation: true
+      tracking: true
+    observation:
+      required: true
+      detail_level: comprehensive
+    reflection:
+      required: true
+      learning_enabled: true
+
+# Research Methodology
+methodology:
+  steps:
+    - query_formulation
+    - source_identification
+    - data_collection
+    - fact_verification
+    - synthesis
+    - documentation
+
+# Performance Metrics
+metrics:
+  - name: accuracy
+    threshold: 0.95
+    priority: critical
+  - name: source_diversity
+    threshold: 0.8
+    priority: high
+  - name: completion_rate
+    threshold: 0.9
+    priority: medium
+
+# Tool Access
+tools:
+  - web_search
+  - fact_checker
+  - source_validator
+  - data_extractor
+
+# Output Configuration
+output_format:
+  type: structured
+  includes:
+    - summary
+    - key_findings
+    - sources
+    - confidence_scores
+    - recommendations
+
+# Error Handling
+error_handling:
+  retry_attempts: 3
+  fallback_strategy: alternate_sources
+  validation_required: true
+
+# Logging Configuration
+logging:
+  level: detailed
+  include_metadata: true
+  track_decisions: true
+  store_sources: true
+
+# Tags (inherited from metadata.yaml)
+tags:
+  reference: web_researcher
+  inherits: true

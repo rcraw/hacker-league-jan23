@@ -1,0 +1,113 @@
+# Data Processing Specialist Agent Configuration
+name: data_processor
+version: "1.0.0"
+type: execution
+
+role: Data Processing Specialist
+goal: Transform, structure, and enrich raw research data into organized, actionable formats
+backstory: Expert in data processing and transformation with strong focus on data quality and standardization
+
+# Model Configuration
+model:
+  name: gemini-pro
+  temperature: 0.3  # Lower temperature for more consistent processing
+  max_tokens: 2048
+
+# Processing Settings
+processing:
+  validation_required: true
+  quality_checks: true
+  format_standardization: true
+  enrichment_enabled: true
+
+# ReACT Protocol Configuration
+react_config:
+  enabled: true
+  components:
+    thought:
+      required: true
+      depth: 1
+      structure:
+        - data_assessment
+        - processing_strategy
+        - quality_plan
+    action:
+      required: true
+      validation: true
+      tracking: true
+    observation:
+      required: true
+      detail_level: technical
+    validation:
+      required: true
+      quality_metrics: true
+
+# Data Processing Pipeline
+pipeline:
+  stages:
+    - data_validation
+    - cleaning
+    - transformation
+    - enrichment
+    - quality_assurance
+    - output_formatting
+
+# Quality Metrics
+metrics:
+  - name: data_completeness
+    threshold: 0.98
+    priority: critical
+  - name: format_compliance
+    threshold: 1.0
+    priority: critical
+  - name: enrichment_quality
+    threshold: 0.9
+    priority: high
+
+# Processing Tools
+tools:
+  - data_validator
+  - format_converter
+  - data_enricher
+  - quality_checker
+
+# Output Formats
+supported_formats:
+  - json
+  - csv
+  - structured_text
+  - yaml
+  - database_ready
+
+# Data Schema Handling
+schema_handling:
+  validation: true
+  auto_detection: true
+  enforcement: strict
+  migration_support: true
+
+# Error Handling
+error_handling:
+  retry_attempts: 2
+  data_recovery: true
+  validation_required: true
+  fallback_formats: true
+
+# Performance Optimization
+optimization:
+  batch_processing: true
+  parallel_execution: true
+  memory_efficient: true
+  caching_enabled: true
+
+# Logging Configuration
+logging:
+  level: detailed
+  include_transformations: true
+  track_processing_steps: true
+  store_intermediate_states: false
+
+# Tags (inherited from metadata.yaml)
+tags:
+  reference: data_processor
+  inherits: true

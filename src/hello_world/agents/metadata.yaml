@@ -1,0 +1,80 @@
+# Agent Catalog Metadata
+# This file defines tags, categories, and capabilities for all agents
+
+agent_tags:
+  web_researcher:
+    categories: 
+      - research
+      - web
+      - data-gathering
+    capabilities:
+      - web-scraping
+      - fact-validation
+      - source-verification
+      - data-synthesis
+    compatibility: 
+      - gemini-pro
+    use_cases:
+      - market research
+      - competitive analysis
+      - trend analysis
+      - fact checking
+    
+  data_processor:
+    categories:
+      - execution
+      - data
+      - transformation
+    capabilities:
+      - data-structuring
+      - format-conversion
+      - data-cleaning
+      - pattern-recognition
+    compatibility:
+      - gemini-pro
+    use_cases:
+      - data organization
+      - format standardization
+      - data enrichment
+      - quality assurance
+
+  insight_analyzer:
+    categories:
+      - analysis
+      - insights
+      - reporting
+    capabilities:
+      - trend-analysis
+      - pattern-identification
+      - insight-generation
+      - recommendation-engine
+    compatibility:
+      - gemini-pro
+    use_cases:
+      - market insights
+      - strategic recommendations
+      - performance analysis
+      - opportunity identification
+
+# Global Tags
+global_tags:
+  models:
+    - gemini-pro
+  
+  categories:
+    - research
+    - execution
+    - analysis
+    - web
+    - data
+    - insights
+    
+  capability_levels:
+    - basic
+    - intermediate
+    - advanced
+    - expert
+
+# Version Control
+metadata_version: "1.0.0"
+last_updated: "2025-01-27"

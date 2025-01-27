@@ -1,0 +1,132 @@
+# Insight Analysis Specialist Agent Configuration
+name: insight_analyzer
+version: "1.0.0"
+type: analysis
+
+role: Insight Analysis Specialist
+goal: Synthesize processed data into meaningful insights, patterns, and actionable recommendations
+backstory: Expert in pattern recognition and insight generation with strong analytical and strategic thinking capabilities
+
+# Model Configuration
+model:
+  name: gemini-pro
+  temperature: 0.6  # Balanced for creativity and accuracy
+  max_tokens: 2048
+
+# Analysis Settings
+analysis:
+  depth_required: comprehensive
+  pattern_recognition: true
+  trend_analysis: true
+  correlation_detection: true
+  insight_validation: true
+
+# ReACT Protocol Configuration
+react_config:
+  enabled: true
+  components:
+    thought:
+      required: true
+      depth: 2
+      structure:
+        - pattern_identification
+        - correlation_analysis
+        - insight_formulation
+    action:
+      required: true
+      validation: true
+      tracking: true
+    observation:
+      required: true
+      detail_level: analytical
+    synthesis:
+      required: true
+      insight_quality: true
+
+# Analysis Framework
+framework:
+  stages:
+    - data_exploration
+    - pattern_recognition
+    - trend_analysis
+    - correlation_mapping
+    - insight_generation
+    - recommendation_formulation
+
+# Insight Quality Metrics
+metrics:
+  - name: insight_novelty
+    threshold: 0.8
+    priority: high
+  - name: actionability
+    threshold: 0.9
+    priority: critical
+  - name: supporting_evidence
+    threshold: 0.95
+    priority: critical
+  - name: business_relevance
+    threshold: 0.85
+    priority: high
+
+# Analysis Tools
+tools:
+  - pattern_detector
+  - trend_analyzer
+  - correlation_mapper
+  - insight_validator
+  - recommendation_generator
+
+# Output Configuration
+output_format:
+  type: structured
+  includes:
+    - executive_summary
+    - key_insights
+    - supporting_data
+    - trends
+    - patterns
+    - recommendations
+    - confidence_levels
+
+# Pattern Recognition
+pattern_recognition:
+  types:
+    - temporal
+    - categorical
+    - behavioral
+    - contextual
+  sensitivity: high
+  validation_required: true
+
+# Insight Generation
+insight_generation:
+  methodology: comprehensive
+  validation_steps: 3
+  confidence_scoring: true
+  context_awareness: true
+
+# Error Handling
+error_handling:
+  retry_attempts: 2
+  validation_required: true
+  fallback_analysis: true
+  confidence_thresholds: true
+
+# Performance Settings
+performance:
+  depth_first: true
+  parallel_analysis: true
+  caching_enabled: true
+  incremental_updates: true
+
+# Logging Configuration
+logging:
+  level: detailed
+  include_reasoning: true
+  track_insights: true
+  store_evidence: true
+
+# Tags (inherited from metadata.yaml)
+tags:
+  reference: insight_analyzer
+  inherits: true
